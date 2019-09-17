@@ -17,7 +17,7 @@ public class SampleServlet extends HttpServlet{
     static final long serialVersionUID = 35L;
 
     @Override
-   protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
        Writer responseWriter = resp.getWriter();
        Optional<String> optName = Optional.ofNullable(req.getParameter("name"));
        String name = optName.isPresent() && !optName.get().isEmpty() ? optName.get() : "";
@@ -26,4 +26,6 @@ public class SampleServlet extends HttpServlet{
        responseWriter.write("Hello" + name + "!");
        responseWriter.flush();
    }
+   
+    
 }
