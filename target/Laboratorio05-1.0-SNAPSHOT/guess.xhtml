@@ -9,13 +9,18 @@
 
 <h:body>
 	<h:form id="guess_form">
-		<p:outputLabel id="number" value="#{guessBean.number}" style="display:none" /> Number to guess </p:outputLabel>  
-		<p:inputText id="txt"/> <br/>
-		<p:outputLabel id="tries" value="#{guessBean.tries}" /> tries </p:outputLabel>  
-		<p:outputLabel id="status" value="#{guessBean.status}" /> status </p:outputLabel>  
-		<p:outputLabel id="prize" value="#{guessBean.prize}" />  prize </p:outputLabel>  
+		<p:outputLabel id="number" value="#{guessBean.number}" style="display:none" />  
+		<p:inputText id="txt" binding="#{input}"/> <br/>
+		<p:outputLabel id="tries" value="#{guessBean.tries}" /> <br/>
+		<p:outputLabel id="status" value="#{guessBean.status}" />  <br/>
+		<p:outputLabel id="prize" value="#{guessBean.prize}" />  <br/>
 		<p:commandButton value="guess" update="guess_form" actionListener="#{guessBean.guess(input.value)}" />
 		<p:commandButton value="restart" update="guess_form" actionListener="#{guessBean.restart()}" />
+                <p:dataTable var="listOfTries" value="#{guessBean.tryNumbers}">
+                    <p:column headerText="listTries">
+                        <h:outputText value="#{listOfTries}" />
+                    </p:column>
+                </p:dataTable>
  	</h:form>
 </h:body>
 </html>
