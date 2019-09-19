@@ -1,0 +1,5 @@
+0:0:0:0:0:0:0:1 - - [18/Sep/2019:11:43:53 -0500] "GET / HTTP/1.1" 200 387 http-bio-8080-exec-1 60
+0:0:0:0:0:0:0:1 - - [18/Sep/2019:11:43:54 -0500] "GET /favicon.ico HTTP/1.1" 404 973 http-bio-8080-exec-3 8
+0:0:0:0:0:0:0:1 - - [18/Sep/2019:11:44:36 -0500] "POST /thisServlet HTTP/1.1" 200 169 http-bio-8080-exec-4 1047
+0:0:0:0:0:0:0:1 - - [18/Sep/2019:17:53:54 -0500] "GET /faces/guess.xhtml HTTP/1.1" 404 - http-bio-8080-exec-1 0
+0:0:0:0:0:0:0:1 - - [18/Sep/2019:17:54:59 -0500] "GET /faces/guess.xhtml HTTP/1.1" 404 - http-bio-8080-exec-1 0
